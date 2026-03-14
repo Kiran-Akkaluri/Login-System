@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Login System</title>
-<link rel="stylesheet" href="style.css">
-
+    <title>Employee Audit Logging System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="login-container">
+<h1>Employee Management with Audit Logging</h1>
 
-<h2>Login System</h2>
+<div class="container">
+    <h3>Add / Update Employee</h3>
 
-<form id="loginForm">
+    <input type="text" id="empId" placeholder="Employee ID">
+    <input type="text" id="empName" placeholder="Employee Name">
+    <input type="number" id="salary" placeholder="Salary">
 
-<input type="text" id="username" placeholder="Enter Username">
+    <button id="saveBtn">Save Employee</button>
+</div>
 
-<input type="password" id="password" placeholder="Enter Password">
+<div class="container">
+    <h3>Employee Table</h3>
 
-<button type="submit">Login</button>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
 
-<p id="error"></p>
+        <tbody></tbody>
+    </table>
+</div>
 
-</form>
+<div class="container">
+    <h3>Audit Log (Trigger Simulation)</h3>
 
+    <table id="auditTable">
+        <thead>
+            <tr>
+                <th>Emp ID</th>
+                <th>Action</th>
+                <th>Old Salary</th>
+                <th>New Salary</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h3>Daily Activity Report (View Simulation)</h3>
+
+    <table id="reportTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total Inserts</th>
+                <th>Total Updates</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
 </div>
 
 <script src="script.js"></script>
